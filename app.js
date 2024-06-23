@@ -3,6 +3,15 @@ function sortear() {
   let de = parseInt(document.getElementById("de").value);
   let ate = parseInt(document.getElementById("ate").value);
 
+  if (de >= ate) {
+    alert(`ERRO: Campo "Do número" deve ser inferior ao campo "Até o número"!`);
+    return;
+  } else if (quantidade > ate - de + 1) {
+    alert(
+      "ERRO: A quantidade de números solicitada é maior que a possibilidade de números a serem exibidos!"
+    );
+  }
+
   let numero;
   let sorteados = [];
 
